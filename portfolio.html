@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Portfolio</title>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #0a192f; 
+            color: white; 
+            position: relative;
+            overflow-x: hidden;
+        }
+        .container { width: 85%; margin: auto; }
+        .header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: rgba(0, 0, 0, 0.9); 
+            color: white; 
+            padding: 15px 30px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+            border-bottom: 2px solid white;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .nav-menu a:hover {
+            text-decoration: underline;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .section { padding: 40px 20px; }
+        .about-section {
+            text-align: center;
+        }
+        .about-section img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 50%;
+        }
+        .project { 
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 30px; 
+            border-radius: 15px; 
+            border: 2px solid white; 
+        }
+        .project .image-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .project img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+        }
+        .resume-container iframe {
+            width: 100%;
+            height: 70vh;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-menu {
+                flex-direction: column;
+                display: none;
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .project {
+                flex-direction: column;
+            }
+            .project img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Theo Philliber</h2>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#Vorta">Vorta</a>
+            <a href="#AWC">AWC</a>
+            <a href="#Autotuning">Autotuning</a>
+            <a href="#ESEE">ESEE</a>
+            <a href="#Plunger Jig">Plunger Jig</a>
+            <a href="#Guitar Pedals">Guitar Pedals</a>
+            <a href="#resume">Resume</a>
+        </nav>
+    </div>
+    <div class="container">
+        <section class="section about-section" id="about">
+            <h1>About Me</h1>
+            <img src="./assets/gibbon.jpg" alt="Your Photo">
+            <p><strong>Your Name</strong> - Mechatronics Engineer with expertise in robotics, electrical design, and firmware development.</p>
+        </section>
+
+        <!-- Project Sections -->
+        <div class="project" id="Vorta">
+            <div class="image-container">
+                <img src="./assets/VortaMain.jpg" alt="Vorta Particle Abatement System Main" class="large-img">
+                <div>
+                    <img src="./assets/VortaSmall1.jpg" alt="Project 1 Thumbnail 1" class="medium-img">
+                    <img src="./assets/VortaSmall2.jpg" alt="Project 1 Thumbnail 2" class="medium-img">
+                </div>
+            </div>
+            <div class="text-container">
+                <h3 style="font-size: 1.8em;">Vorta Particle Abatement System</h3>
+                <h4>Purpose</h4>
+                <ul>
+                    <li>A system designed to effectively remove particles from semiconductor EFEMs and wafer-handling equipment.</li>
+                </ul>
+                <h4>Description</h4>
+                <ul>
+                    <li>Utilizes a specialized Mobile Electrostatic Carrier (MESC) that fits within a standard FOUP.</li>
+                    <li>The MESC is charged to a high voltage using pogo pins.</li>
+                    <li>Transported to different stations in the EFEM, where stored voltage attracts and captures airborne particles.</li>
+                </ul>
+                <h4>Benefits</h4>
+                <ul>
+                    <li>Enhances semiconductor equipment cleanliness, improving yield.</li>
+                    <li>Integrates into a standard FOUP, ensuring broad compatibility with EFEMs.</li>
+                    <li>Eliminates manual cleaning processes, reducing cost and complexity, particularly in vacuum environments.</li>
+                </ul>
+                <h4>My Contribution</h4>
+                <ul>
+                    <li>Lead engineer responsible for testing, analyzing results, and iterative improvements.</li>
+                    <li>Initially designed by an external consulting team, but I have taken full ownership of PCB revisions and reworks.</li>
+                    <li>Refined the system for enhanced performance and reliability.</li>
+                </ul>
+            </div>
+        </div>
+            
+        <div class="project" id="AWC" style="flex-direction: row-reverse;">
+            <div class="image-container">
+                <img src="./assets/AWC1.jpg" alt="Project 2 Main" class="large-img">
+                <div>
+                    <img src="./assets/AWC2.jpg" alt="Project 2 Thumbnail 1" class="medium-img">
+                    <img src="./assets/AWC2.jpg" alt="Project 2 Thumbnail 2" class="medium-img">
+                </div>
+            </div>
+            <div class="text-container">
+                <h3 style="font-size: 1.8em;">Auto Wafer Centering</h3>
+                <h4>Purpose</h4>
+                <ul>
+                    <li>System to detect positioning of wafers on end effector using throughbeam sensors.</li>
+                </ul>
+                <h4>Description</h4>
+                <ul>
+                    <li>Based on timing of sensor triggers, the center position of the wafer can be calculated.</li>
+                    <li>Basic implementation was already implemented. However, when a sensor hit a wafer's notch or flat feature, significant error was introduced.</li>
+                </ul>
+                <h4>Benefits</h4>
+                <ul>
+                    <li>Implemented third sensor and Nelder-Mead optimization algorithm to account for variation in test conditions.</li>
+                    <li>Created geometric and discrete simulations in Python to find best position for each sensor, and to analyze effects of sensor latency and robot vibration.</li>
+                </ul>
+                <h4>My Contribution</h4>
+                <ul>
+                    <li>Improved overall correction accuracy from around 0.2mm to 0.1mm.</li>
+                    <li>Enabled center correction of wafers with flat features, transparent materials, and different sizes.
+                </ul>
+            </div>
+        </div>
+
+        <div class="project" id="Autotuning">
+            <div class="image-container">
+                <img src="./assets/gibbon.jpg" alt="Project 3 Main" class="large-img">
+                <div>
+                    <img src="./assets/gibbon.jpg" alt="Project 3 Thumbnail 1" class="medium-img">
+                    <img src="./assets/gibbon.jpg" alt="Project 3 Thumbnail 2" class="medium-img">
+                </div>
+            </div>
+            <div class="text-container">
+                <h3 style="font-size: 1.8em;">Autotuning</h3>
+                <h4>Purpose</h4>
+                <ul>
+                    <li>To design a program to automate portions of robot motion tuning.</li>
+                </ul>
+                <h4>Description</h4>
+                <ul>
+                    <li>Engineers manually tune motor parameters to optimize robot performance -- maintaining fast throughput while reducing vibration and acceleration experienced by the payload.</li>
+                    <li>Current process is time-consuming and repetitive.</li>
+                </ul>
+                <h4>Benefits</h4>
+                <ul>
+                    <li>Created Python program to automate tuning of motor current and throughput by changing motor acceleration and deceleration values.</li>
+                    <li>Implemented inverse Vandermonde Matrix algorithm to predict value of measured variables given a pair of accel and decel values.</li>
+                    <li>Algorithm could easily be expanded to include any number of measured variables, allowing future expansion of program.</li>
+                </ul>
+                <h4>My Contribution</h4>
+                <ul>
+                    <li>Implemented optimization algorithm, data handling.</li>
+                    <li>Assisted with communication to robot and simulator utility.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project" id="ESEE" style="flex-direction: row-reverse;">
+            <div class="image-container">
+                <img src="./assets/gibbon.jpg" alt="Project 4 Main" class="large-img">
+                <div>
+                    <img src="./assets/gibbon.jpg" alt="Project 4 Thumbnail 1" class="medium-img">
+                    <img src="./assets/gibbon.jpg" alt="Project 4 Thumbnail 2" class="medium-img">
+                </div>
+            </div>
+            <div class="text-container">
+                <h3 style="font-size: 1.8em;">Electrostatic End Effector</h3>
+                <h4>Purpose</h4>
+                <h4>Description</h4>
+                <h4>Benefits</h4>
+                <h4>My Contribution</h4>
+            </div>
+        </div>
+
+
+        <div class="project" id="Plunger Jig">
+            <div class="image-container">
+                <img src="./assets/PlungerJig.jpg" alt="Project 3 Main" class="large-img">
+                <div>
+                    <img src="./assets/gibbon.jpg" alt="Project 3 Thumbnail 1" class="medium-img">
+                    <img src="./assets/gibbon.jpg" alt="Project 3 Thumbnail 2" class="medium-img">
+                </div>
+            </div>
+            <div class="text-container">
+                <h3 style="font-size: 1.8em;">Plunger Jig</h3>
+                <h4>Purpose</h4>
+                <ul>
+                    <li>To design a program to automate portions of robot motion tuning.</li>
+                </ul>
+                <h4>Description</h4>
+                <ul>
+                    <li>Engineers manually tune motor parameters to optimize robot performance -- maintaining fast throughput while reducing vibration and acceleration experienced by the payload.</li>
+                    <li>Current process is time-consuming and repetitive.</li>
+                </ul>
+                <h4>Benefits</h4>
+                <ul>
+                    <li>Created Python program to automate tuning of motor current and throughput by changing motor acceleration and deceleration values.</li>
+                    <li>Implemented inverse Vandermonde Matrix algorithm to predict value of measured variables given a pair of accel and decel values.</li>
+                    <li>Algorithm could easily be expanded to include any number of measured variables, allowing future expansion of program.</li>
+                </ul>
+                <h4>My Contribution</h4>
+                <ul>
+                    <li>Implemented optimization algorithm, data handling.</li>
+                    <li>Assisted with communication to robot and simulator utility.</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="project" id="Guitar Pedals">
+            <div class="image-container">
+                <img src="./assets/Red1.jpg" alt="Project 3 Main" class="large-img">
+                <div>
+                    <img src="./assets/Red2.jpg" alt="Project 3 Thumbnail 1" class="medium-img">
+                    <img src="./assets/RedPCB.jpg" alt="Project 3 Thumbnail 2" class="medium-img">
+                </div>
+            </div>
+            <div class="text-container">
+                <h3 style="font-size: 1.8em;">Guitar Pedals</h3>
+                <h4>Purpose</h4>
+                <ul>
+                    <li>To create custom devices to alter guitar sound.</li>
+                </ul>
+                <h4>Description</h4>
+                <ul>
+                    <li>Design PCBs using both digital and analog circuits to modify guitar sound.</li>
+                    <li>Use Digital Signal Processing to convert audio signal to digital.</li>
+                    <li>Write custom C-based firmware for digital pedals. Can reflash board to change effects.</li>
+                    <li>Design hardware in CAD.</li>
+                    <li>Create custom finishes using Adobe Illustrator and UV printing or hand painting.</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        <section class="section resume-container" id="resume">
+            <h2>Resume</h2>
+            <iframe src="./assets/Resume - Theo Philliber.pdf"></iframe>
+            <br>
+            <a href="./assets/Resume - Theo Philliber.pdf" download>Download My Resume</a>
+        </section>
+    </div>
+</body>
+</html>
