@@ -117,8 +117,6 @@
             <a href="#Vorta">Vorta</a>
             <a href="#AWC">AWC</a>
             <a href="#Autotuning">Autotuning</a>
-            <a href="#ESEE">ESEE</a>
-            <a href="#Plunger Jig">Plunger Jig</a>
             <a href="#Guitar Pedals">Guitar Pedals</a>
             <a href="#resume">Resume</a>
         </nav>
@@ -126,8 +124,9 @@
     <div class="container">
         <section class="section about-section" id="about">
             <h1>About Me</h1>
-            <img src="./assets/gibbon.jpg" alt="Your Photo">
-            <p><strong>Your Name</strong> - Mechatronics Engineer with expertise in robotics, electrical design, and firmware development.</p>
+            <img src="./assets/Headshot.jpeg" alt="Your Photo">
+            <p><strong>Your Name</strong> - I am a Mechatronics Engineer with expertise in robotics, electrical design, and firmware development.</p>
+            <p>This portfolio demonstrates just a few of my professional and passion projects.</p>
         </section>
 
         <!-- Project Sections -->
@@ -136,7 +135,7 @@
                 <img src="./assets/VortaMain.jpg" alt="Vorta Particle Abatement System Main" class="large-img">
                 <div>
                     <img src="./assets/VortaSmall1.jpg" alt="Project 1 Thumbnail 1" class="medium-img">
-                    <img src="./assets/VortaSmall2.jpg" alt="Project 1 Thumbnail 2" class="medium-img">
+                    <img src="./assets/VortaPCB.jpg" alt="Project 1 Thumbnail 2" class="medium-img">
                 </div>
             </div>
             <div class="text-container">
@@ -151,18 +150,19 @@
                     <li>The MESC is charged to a high voltage using pogo pins.</li>
                     <li>Transported to different stations in the EFEM, where stored voltage attracts and captures airborne particles.</li>
                 </ul>
-                <h4>Benefits</h4>
-                <ul>
-                    <li>Enhances semiconductor equipment cleanliness, improving yield.</li>
-                    <li>Integrates into a standard FOUP, ensuring broad compatibility with EFEMs.</li>
-                    <li>Eliminates manual cleaning processes, reducing cost and complexity, particularly in vacuum environments.</li>
-                </ul>
                 <h4>My Contribution</h4>
                 <ul>
                     <li>Lead engineer responsible for testing, analyzing results, and iterative improvements.</li>
                     <li>Initially designed by an external consulting team, but I have taken full ownership of PCB revisions and reworks.</li>
                     <li>Refined the system for enhanced performance and reliability.</li>
                 </ul>
+                <h4>Results</h4>
+                <ul>
+                    <li>Enhances semiconductor equipment cleanliness, improving yield.</li>
+                    <li>Integrates into a standard FOUP, ensuring broad compatibility with EFEMs.</li>
+                    <li>Eliminates manual cleaning processes, reducing cost and complexity, particularly in vacuum environments.</li>
+                </ul>
+                
             </div>
         </div>
             
@@ -171,7 +171,7 @@
                 <img src="./assets/AWC1.jpg" alt="Project 2 Main" class="large-img">
                 <div>
                     <img src="./assets/AWC2.jpg" alt="Project 2 Thumbnail 1" class="medium-img">
-                    <img src="./assets/AWC2.jpg" alt="Project 2 Thumbnail 2" class="medium-img">
+                    <img src="./assets/Neldermead.png" alt="Project 2 Thumbnail 2" class="medium-img">
                 </div>
             </div>
             <div class="text-container">
@@ -182,15 +182,15 @@
                 </ul>
                 <h4>Description</h4>
                 <ul>
-                    <li>Based on timing of sensor triggers, the center position of the wafer can be calculated.</li>
-                    <li>Basic implementation was already implemented. However, when a sensor hit a wafer's notch or flat feature, significant error was introduced.</li>
+                    <li>Based on timing of sensor triggers, the wafer's center position can be calculated.</li>
+                    <li>Basic implementation already existed. However, when a sensor hit a wafer's notch or flat feature, significant error was introduced.</li>
                 </ul>
-                <h4>Benefits</h4>
+                <h4>My Contribution</h4>
                 <ul>
                     <li>Implemented third sensor and Nelder-Mead optimization algorithm to account for variation in test conditions.</li>
                     <li>Created geometric and discrete simulations in Python to find best position for each sensor, and to analyze effects of sensor latency and robot vibration.</li>
                 </ul>
-                <h4>My Contribution</h4>
+                <h4>Results</h4>
                 <ul>
                     <li>Improved overall correction accuracy from around 0.2mm to 0.1mm.</li>
                     <li>Enabled center correction of wafers with flat features, transparent materials, and different sizes.
@@ -200,55 +200,36 @@
 
         <div class="project" id="Autotuning">
             <div class="image-container">
-                <img src="./assets/gibbon.jpg" alt="Project 3 Main" class="large-img">
+                <img src="./assets/DataPlot.png" alt="Project 3 Main" class="large-img">
                 <div>
-                    <img src="./assets/gibbon.jpg" alt="Project 3 Thumbnail 1" class="medium-img">
-                    <img src="./assets/gibbon.jpg" alt="Project 3 Thumbnail 2" class="medium-img">
+                    <img src="./assets/PolynomialFit.png" alt="Project 3 Thumbnail 1" class="large-img">
                 </div>
             </div>
             <div class="text-container">
                 <h3 style="font-size: 1.8em;">Autotuning</h3>
                 <h4>Purpose</h4>
                 <ul>
-                    <li>To design a program to automate portions of robot motion tuning.</li>
+                    <li>Program to automate portions of robot motion tuning.</li>
                 </ul>
                 <h4>Description</h4>
                 <ul>
                     <li>Engineers manually tune motor parameters to optimize robot performance -- maintaining fast throughput while reducing vibration and acceleration experienced by the payload.</li>
-                    <li>Current process is time-consuming and repetitive.</li>
+                    <li>Current process is labor-intensive and repetitive.</li>
                 </ul>
-                <h4>Benefits</h4>
+                <h4>My Contribution</h4>
                 <ul>
                     <li>Created Python program to automate tuning of motor current and throughput by changing motor acceleration and deceleration values.</li>
                     <li>Implemented inverse Vandermonde Matrix algorithm to predict value of measured variables given a pair of accel and decel values.</li>
-                    <li>Algorithm could easily be expanded to include any number of measured variables, allowing future expansion of program.</li>
+                    <li>Also created initial framework for communicating with the controller and storing and handling data.
                 </ul>
-                <h4>My Contribution</h4>
+                <h4>Results</h4>
                 <ul>
-                    <li>Implemented optimization algorithm, data handling.</li>
-                    <li>Assisted with communication to robot and simulator utility.</li>
+                    <li>Automatic tuning program can be run overnight or on simulator, reducing labor hours required.</li>
+                    <li>Algorithm could easily be expanded to include any number of measured variables, allowing future expansion of program to automate full tuning.</li>
                 </ul>
             </div>
         </div>
-
-        <div class="project" id="ESEE" style="flex-direction: row-reverse;">
-            <div class="image-container">
-                <img src="./assets/gibbon.jpg" alt="Project 4 Main" class="large-img">
-                <div>
-                    <img src="./assets/gibbon.jpg" alt="Project 4 Thumbnail 1" class="medium-img">
-                    <img src="./assets/gibbon.jpg" alt="Project 4 Thumbnail 2" class="medium-img">
-                </div>
-            </div>
-            <div class="text-container">
-                <h3 style="font-size: 1.8em;">Electrostatic End Effector</h3>
-                <h4>Purpose</h4>
-                <h4>Description</h4>
-                <h4>Benefits</h4>
-                <h4>My Contribution</h4>
-            </div>
-        </div>
-
-
+<!--
         <div class="project" id="Plunger Jig">
             <div class="image-container">
                 <img src="./assets/PlungerJig.jpg" alt="Project 3 Main" class="large-img">
@@ -282,7 +263,7 @@
             </div>
         </div>
 
-
+    -->
 
 
 
@@ -290,7 +271,7 @@
             <div class="image-container">
                 <img src="./assets/Red1.jpg" alt="Project 3 Main" class="large-img">
                 <div>
-                    <img src="./assets/Red2.jpg" alt="Project 3 Thumbnail 1" class="medium-img">
+                    <img src="./assets/RatPedal.jpg" alt="Project 3 Thumbnail 1" class="medium-img">
                     <img src="./assets/RedPCB.jpg" alt="Project 3 Thumbnail 2" class="medium-img">
                 </div>
             </div>
@@ -302,11 +283,11 @@
                 </ul>
                 <h4>Description</h4>
                 <ul>
-                    <li>Design PCBs using both digital and analog circuits to modify guitar sound.</li>
+                    <li>Design PCBs in KiCAD using both digital and analog circuits to modify guitar sound.</li>
                     <li>Use Digital Signal Processing to convert audio signal to digital.</li>
                     <li>Write custom C-based firmware for digital pedals. Can reflash board to change effects.</li>
-                    <li>Design hardware in CAD.</li>
-                    <li>Create custom finishes using Adobe Illustrator and UV printing or hand painting.</li>
+                    <li>Layout hardware assembly in Solidworks.</li>
+                    <li>Create custom finishes using Adobe Illustrator and UV printing, or hand painting.</li>
                 </ul>
             </div>
         </div>
